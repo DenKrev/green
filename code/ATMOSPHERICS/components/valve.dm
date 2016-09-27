@@ -71,9 +71,38 @@
 	name = "digital valve"
 	desc = "A digitally controlled valve."
 	icon_state = "dvalve_map"
+	var/open_panel = 0
+	var/datum/wires/activation/digital_valve/wires = null
+	var/activateable = 1
+
+/obj/machinery/atmospherics/binary/valve/digital/New()
+	wires = new(src)
+	..()
+
+/obj/machinery/atmospherics/binary/valve/digital/Deconstruct()
+	for(var/colour in wireColours)
+		wires.Detach(colour)
+	..()
+
+/obj/machinery/atmospherics/binary/valve/digital/attackby(var/obj/item/weapon/I, var/mob/user, params)
+	if(istype(I, /obj/item/weapon/screwdriver))
+		open_panel = !open_panel
+		user << "<span class='notice'>You [open_panel ? "open" : "close"] the wire panel.</span>"
+	else if(istype(I, /obj/item/weapon/wirecutters) || istype(I, /obj/item/device/multitool) || istype(I, /obj/item/device/assembly/signaler))
+		wires.Interact(user)
+	else
+		..()
+
+/obj/machinery/atmospherics/binary/valve/digital/attack_hand(mob/user)
+	if(open_panel)
+		wires.Interact(user)
+	else
+		if(activateable)
+			..()
 
 /obj/machinery/atmospherics/binary/valve/digital/attack_ai(mob/user)
-	return src.attack_hand(user)
+	if(activateable)
+		return src.attack_hand(user)
 
 /obj/machinery/atmospherics/binary/valve/digital/update_icon_nopipes(animation)
 	normalize_dir()
