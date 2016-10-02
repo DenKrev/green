@@ -99,7 +99,6 @@
 		Stun(3)
 		Weaken(3)
 	if (PN.avail > 80000000)
-		src.take_overall_damage(150,0)
 		src.dust()
 	return shock_damage
 
