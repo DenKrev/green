@@ -45,6 +45,7 @@
 		ammo.BB.damage_type=BRUTE
 		ammo.modified=1
 		ammo.icon_state = "foamdart_empty"
+		ammo.BB.icon_state = "foamdart_empty"
 		ammo.desc = "Its nerf or nothing! ...Although, this one doesn't look too safe."
 	if(src.contents.len)
 		ammo.BB.nodamage=0
