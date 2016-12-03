@@ -66,12 +66,12 @@ datum/design/rtg
 	build_type = IMPRINTER
 	reliability = 79
 	materials = list("$glass" = 1000, "sacid" = 20)
-	build_path = /obj/item/weapon/circuitboard/pacman
+	build_path = /obj/item/weapon/circuitboard/rtg
 	category = list("Engineering Machinery")
 
 datum/design/pacman
-	name = "Machine Design (PACMAN-type Generator Board)"
-	desc = "The circuit board that for a PACMAN-type portable generator."
+	name = "Machine Design (PTEG Generator Board)"
+	desc = "The circuit board that for a PTEG portable generator."
 	id = "pacman"
 	req_tech = list("programming" = 3, "plasmatech" = 3, "powerstorage" = 3, "engineering" = 3)
 	build_type = IMPRINTER
@@ -79,7 +79,7 @@ datum/design/pacman
 	materials = list("$glass" = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/pacman
 	category = list("Engineering Machinery")
-
+/*
 datum/design/superpacman
 	name = "Machine Design (SUPERPACMAN-type Generator Board)"
 	desc = "The circuit board that for a SUPERPACMAN-type portable generator."
@@ -101,3 +101,4 @@ datum/design/mrspacman
 	materials = list("$glass" = 1000, "sacid" = 20)
 	build_path = /obj/item/weapon/circuitboard/pacman/mrs
 	category = list("Engineering Machinery")
+*/

@@ -508,7 +508,7 @@ to destroy them and players will be able to make replacements.
 							/obj/item/weapon/stock_parts/capacitor = 2)
 
 /obj/item/weapon/circuitboard/pacman
-	name = "circuit board (PACMAN-type Generator)"
+	name = "circuit board (PTEG Generator)"
 	build_path = /obj/machinery/power/port_gen/pacman
 	board_type = "machine"
 	origin_tech = "programming=3;powerstorage=3;plasmatech=3;engineering=3"
@@ -516,7 +516,7 @@ to destroy them and players will be able to make replacements.
 							/obj/item/weapon/stock_parts/matter_bin = 1,
 							/obj/item/weapon/stock_parts/micro_laser = 1,
 							/obj/item/stack/cable_coil = 2,
-							/obj/item/weapon/stock_parts/capacitor = 1)
+							/obj/item/weapon/stock_parts/manipulator = 1)
 
 /obj/item/weapon/circuitboard/pacman/super
 	name = "circuit board (SUPERPACMAN-type Generator)"
