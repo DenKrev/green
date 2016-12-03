@@ -82,7 +82,7 @@
 	var/max_sheets = 100
 	var/sheet_name = ""
 	var/sheet_path = /obj/item/stack/sheet/mineral/plasma
-	var/board_path = "/obj/item/weapon/circuitboard/pacman"
+	var/board_path = "/obj/item/weapon/circuitboard/pteg"
 	var/sheet_left = 0 // How much is left of the sheet
 	var/time_per_sheet = 5000
 	var/burning_power = 10
